@@ -1,0 +1,75 @@
+<html>
+    <head>
+        <title>Scanning Consumer Complaints</title>
+        <link rel=stylesheet type=text/css href="{{ url_for('static', filename='style.css') }}">
+    </head>
+    <body>
+        <div id="container">
+            <div class="title">
+                <h1>Scan Consumer Complaints</h1>
+            </div>
+            <div id="content">
+                <form method="post" action="{{ url_for('equal') }}" style="border: solid 1px #000000;"> Queries for Equal to<br>
+                  <label>Select ( </label>
+                  
+<input type="checkbox"  value="Complaint_ID" name="Complaint_ID"/> Complaint_ID
+<input type="checkbox"  value="Product" name="select"/>Product
+<input type="checkbox"  value="Sub-product" name="select"/>Sub-product
+<input type="checkbox"  value="Issue" name="select"/>Issue
+<input type="checkbox"  value="Sub-issue" name="select"/>Sub-issue
+<input type="checkbox"  value="State" name="select"/>State
+<input type="checkbox"  value="ZIP code" name="select"/>ZIP code
+<input type="checkbox"  value="Submitted via" name="select"/>Submitted via
+<input type="checkbox"  value="Date received" name="select"/>Date received
+<input type="checkbox"  value="Date_sent_to_company" name="select"/>Date sent to company
+<input type="checkbox"  value="Company" name="select"/>Company
+<input type="checkbox"  value="Company response" name="select"/>Company response
+<input type="checkbox"  value="Timely response" name="select"/>Timely response
+<input type="checkbox"  value="Consumer_disputed" name="select"/>Consumer disputed
+
+<label for="youremail"> ) </label>
+</br>
+</br>
+
+<label>from consumer complaints where State(eg. TX) equals to 
+                  
+<input type="text" name="state"  /> , Product equals to 
+<input type="text" name="product"/> 
+</label>
+                  <input type="submit" />
+<br>
+            </form><br><br>
+<form method="post" action="{{ url_for('contains') }}" style="border: solid 1px #000000;">
+Queries for Contains , Begins With: <br>
+                  <label>Select ( </label>
+                  
+<input type="checkbox"  value="Complaint_ID" name="Complaint_ID"/> Complaint_ID
+<input type="checkbox"  value="Product" name="select"/>Product
+<input type="checkbox"  value="Sub-product" name="select"/>Sub-product
+<input type="checkbox"  value="Issue" name="select"/>Issue
+<input type="checkbox"  value="Sub-issue" name="select"/>Sub-issue
+<input type="checkbox"  value="State" name="select"/>State
+<input type="checkbox"  value="ZIP code" name="select"/>ZIP code
+<input type="checkbox"  value="Submitted via" name="select"/>Submitted via
+<input type="checkbox"  value="Date received" name="select"/>Date received
+<input type="checkbox"  value="Date_sent_to_company" name="select"/>Date sent to company
+<input type="checkbox"  value="Company" name="select"/>Company
+<input type="checkbox"  value="Company response" name="select"/>Company response
+<input type="checkbox"  value="Timely response" name="select"/>Timely response
+<input type="checkbox"  value="Consumer_disputed" name="select"/>Consumer disputed
+
+<label for="youremail"> ) </label>
+</br>
+</br>
+
+<label>from consumer complaints where Issue contains
+                  
+<input type="text" name="issue"  /> , Company begins with
+<input type="text" name="company"/> 
+</label>
+                  <input type="submit" />
+<br>
+            </form>
+	<br>
+     	</body>
+</html>

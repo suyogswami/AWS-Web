@@ -1,0 +1,10 @@
+branch-defaults:
+  default:
+    environment: assign4-dev
+global:
+  application_name: assign4
+  default_ec2_keyname: aws-tools
+  default_platform: Python 2.7
+  default_region: us-west-2
+  profile: eb-cli
+  sc: null
