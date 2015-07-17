@@ -19,10 +19,7 @@ import time
 
 # Create connection to DynamoDB
 conn = boto.dynamodb2.connect_to_region(
-        'us-west-2',
-        aws_access_key_id='AKIAJFJYGQBAWPNXB6UA',
-        aws_secret_access_key='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'
-    )
+        )
 
 #Create Table in DynamoDB
 consumer_complaints=Table.create('Customer_complaints',
